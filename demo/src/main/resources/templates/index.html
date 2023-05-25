@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <style>
+      body {
+        background-color: #f2f2f2;
+      }
+      #login-form {
+        background-color: #fff;
+        padding: 20px;
+        width: 400px;
+        margin: 0 auto;
+        margin-top: 50px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      label {
+        float: left;
+        display: block;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        display: block;
+        margin: 0 auto;
+      }
+      input[type="submit"], a.button {
+        text-decoration: none;
+        text-align: center;
+        margin-top: 10px;
+        background-color: #4CAF50;
+        color: #fff;
+        font-size: 16px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+      form {
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+<div id="login-form">
+    <h1>Login</h1>
+    <form action="login" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <input type="submit" value="Login">
+        <a class="button" th:href="@{/register}">Register</a>
+    </form>
+</div>
+</body>
+</html>
